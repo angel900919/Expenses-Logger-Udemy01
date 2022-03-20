@@ -1,13 +1,189 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap');
+
+* {
+  box-sizing: border-box;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+html {
+  font-family: 'Noto Sans JP', sans-serif;
+}
+
+body {
+  margin: 0;
+  background-color: #3f3f3f;
+}
+
+.block1{
+  display: flex;
+  flex-direction: column;
+  height: 100px;
+  width: 120px;
+  background-color: #262526;
+  border-radius: 15px;
+  border: 1px solid white;
+  justify-content: center;
+  align-items: center;
+
+}
+
+h3{
+  margin: 0;
+}
+
+.insideBox{
+  margin: 0;
+  color: white;
+}
+
+.ExpenseStyle{
+  margin-top:0;
+  margin-right:10px;
+  margin-bottom:0;
+  margin-left:10px;
+  color: white;
+  font-size: 18px;
+}
+
+.value--Style{
+  display: flex;
+  height: 50px;
+  width: 150px;
+  background-color: #380054;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  border-radius: 15px;
+  border: 1px solid white;
+
+
+}
+
+.expenses--Bar{
+  display: flex;
+  flex-direction: row;
+  height: 120px;
+  width: auto;
+  background-color: #434243;
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-top:10px;
+  margin-bottom:10px;
+  border-radius: 15px;
+  padding-left: 10px;
+  padding-bottom: 10px;
+  padding-top: 10px;
+  padding-right: 10px;
+  align-items: center;
+  justify-content:space-between;
+
+}
+
+.expenses--Bar--box1{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.bar--chart{
+  display: flex;
+  flex-direction: row;
+  justify-content:space-evenly;
+  height: 200px;
+  width: auto;
+  background-color:#F7DAFF;
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-bottom:10px;
+  border-radius: 15px;
+  padding-right: 50px;
+  padding-left: 50px;
+  padding-bottom: 20px;
+  padding-top: 10px;
+}
+
+.cylinder--bar--empty{
+  height: 150px;
+  width: 20px;
+  border-radius: 15px;
+  border: 1px solid black;
+  background-color:#BBABEC;
+}
+
+.cylinder--bar--25{
+  height: 150px;
+  width: 20px;
+  border-radius: 15px;
+  border: 1px solid black;
+  border-bottom: 38px solid #3F23A2;
+  background-color:#BBABEC;
+}
+
+.cylinder--bar--50{
+  height: 150px;
+  width: 20px;
+  border-radius: 15px;
+  border: 1px solid black;
+  border-bottom: 75px solid #3F23A2;
+  background-color:#BBABEC;
+}
+
+.cylinder--bar--75{
+  height: 150px;
+  width: 20px;
+  border-radius: 15px;
+  border: 1px solid black;
+  border-bottom: 113px solid #3F23A2;
+  background-color:#BBABEC;
+}
+
+.cylinder--bar--100{
+  height: 150px;
+  width: 20px;
+  border-radius: 15px;
+  border: 1px solid black;
+  background-color:#3F23A2;
+}
+
+
+
+
+
+.cylinder{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+}
+
+.buttonFilter{
+  display: flex;
+  flex-direction: row;
+  padding-right: 50px;
+  padding-left: 50px;
+  justify-content:space-between;
+  margin-bottom: 10px;
+
+}
+
+.buttonFilter--select{
+
+  padding-right: 30px;
+  padding-left: 40px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+
+}
+
+.main--container{
+  height: auto;
+  width: auto;
+  border-radius: 15px;
+  background-color:#1E1D1E;
+  margin-left: 100px;
+  margin-right: 100px;
+  padding-bottom: 10px;
+  padding-top: 10px;
+  padding-right: 10px;
+  padding-left: 10px;
+
 }

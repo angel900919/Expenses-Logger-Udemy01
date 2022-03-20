@@ -1,0 +1,24 @@
+
+
+.AddExpense--container{
+    display: flex;
+    align-items:  flex-start;
+    justify-content: center;
+    height: 70px;
+    width: auto;
+    border-radius: 0 0 15px 15px;
+    background-color:#9E86ED;
+    margin-left: 100px;
+    margin-right: 100px;
+    margin-bottom:20px
+
+}
+
+.AddExpense--button{
+    background-color: #380056;
+    color: white;
+    border-radius: 10px;
+    padding: 15px;
+    text-align: center;
+
+}

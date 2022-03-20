@@ -1,24 +1,46 @@
-import logo from './logo.svg';
-import './App.css';
+import ExpensesBar from "./components/expenses/ExpensesBar";
+import BarChart from "./components/barchart/BarChart";
+import ButtonFilter from "./components/ButtonFilter";
+import AddExpenseButton from "./components/AddExpenseButton";
+import AddExpenseValues from "./components/AddExpenseValues";
+import React from "react";
+
+
 
 function App() {
+
+    const [newExpense, addExpenseState] = React.useState(false);
+    const [expensesArrayST, setExpense] = React.useState([]);
+
+    function addExpense(){
+        addExpenseState((preState) => !preState)
+    }
+
+    function cancelButton(){
+        addExpenseState((preState) => !preState)
+    }
+
+    function addButton(objectExpense){
+        setExpense((preVal)=> [...preVal,objectExpense])
+
+    }
+
+    function yearSelection(year){
+        console.log(year)
+    }
+
+
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+      <div>
+          {newExpense ? <AddExpenseValues eventCancel={cancelButton} eventAdd={addButton}/> :<AddExpenseButton event={addExpense}/> }
+          <div className="main--container">
+              <ButtonFilter event={yearSelection}/>
+              <BarChart values={expensesArrayST}></BarChart>
+              {expensesArrayST.length > 0 && expensesArrayST.map((expensesItems)=> <ExpensesBar details={expensesItems}></ExpensesBar>) }
+          </div>
+      </div>
+
   );
 }
 

@@ -1,0 +1,51 @@
+
+
+.AddExpenseValues--container{
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    width: auto;
+    border-radius: 0 0 15px 15px;
+    background-color:#9E86ED;
+    margin-left: 100px;
+    margin-right: 100px;
+    margin-bottom:20px;
+    padding: 15px;
+
+}
+
+.AddExpenseValues--inputs{
+    display: flex;
+    flex-direction: row;
+}
+
+.AddExpenseValues--inputs--field{
+    border-radius: 2px;
+    width: 250px;
+    border: none;
+    padding: 5px;
+    margin-right: 10px;
+}
+
+.AddExpenseValues--button{
+    display: flex;
+    justify-content: flex-end;
+
+}
+
+.AddExpenseValues--button-cancel{
+    background-color:#9E86ED;
+    color: #380056;
+    text-align: center;
+
+    margin-right: 30px;
+}
+
+.AddExpenseValues--button-add{
+    background-color: #380056;
+    color: white;
+    border-radius: 10px;
+    padding: 15px;
+    text-align: center;
+
+}
