@@ -1,14 +1,16 @@
-import React from "react";
+import React, {useEffect} from "react";
 
 
 export default function ButtonFilter(props){
     const [formData, setFormData] = React.useState("2022")
 
+
+    useEffect(()=>props.event(formData))
+
     function handleChange(event) {
         setFormData(event.target.value);
-        props.event(event.target.value);
-    }
 
+    }
 
     return(
         <div className="buttonFilter">

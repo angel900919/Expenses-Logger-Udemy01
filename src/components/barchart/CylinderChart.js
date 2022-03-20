@@ -9,7 +9,6 @@ export default function CylinderChart(props){
         borderBottom:`${styleValue}px solid #3F23A2`
     }
 
-    console.log(styleValue)
     return(
         <div className="cylinder">
             <div className="cylinder--bar--empty" style={style}></div>

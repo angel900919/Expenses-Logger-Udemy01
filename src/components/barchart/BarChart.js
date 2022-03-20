@@ -1,6 +1,6 @@
 import React from "react";
 import CylinderChart from "./CylinderChart";
-
+import {nanoid} from "nanoid"
 
 export default function BarChart(props){
 
@@ -70,18 +70,10 @@ export default function BarChart(props){
     for (const element of props.values){
         totalYear+=parseInt(element.amount)
     }
-    // console.log("Total in a year")
-    // console.log(totalYear)
-    // console.log("Total per month")
-    // for (const values of chartData ){
-    //     console.log( values.month + ": " + values.total)
-    // }
-    //
-    // console.log("end")
 
     return(
      <div className="bar--chart">
-         {chartData.map((item) => <CylinderChart month={item.month.slice(0,3)} total={(item.total)/totalYear}></CylinderChart>)}
+         {chartData.map((item) => <CylinderChart key={nanoid()} month={item.month.slice(0,3)} total={(item.total)/totalYear}></CylinderChart>)}
      </div>
     )
 }

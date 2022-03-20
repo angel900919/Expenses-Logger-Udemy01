@@ -69,7 +69,7 @@ export default function AddExpenseValues(props){
                  <input
                      className="AddExpenseValues--inputs--field"
                      onChange={handleChange}
-                     type="text"
+                     type="number"
                      name="amount"
                      value={formData.amount}
                  />
